@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Arc?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.paintfxmlController">
+   <children>
+      <Pane layoutX="-290.0" layoutY="-163.0" prefHeight="245.0" prefWidth="361.0" />
+      <VBox prefHeight="12.0" prefWidth="720.0">
+         <children>
+            <HBox prefHeight="18.0" prefWidth="720.0" spacing="30.0">
+               <children>
+                  <Rectangle fx:id="rect" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="28.0" onMouseClicked="#rectselected" stroke="BLACK" strokeType="INSIDE" width="51.0" />
+                  <Circle fx:id="circle" fill="WHITE" onMouseClicked="#circleselected" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Line fx:id="line" endX="-18.521297454833984" endY="51.27871322631836" onMouseClicked="#lineselected" startX="-54.214210510253906" startY="34.18581008911133">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Line>
+                  <Ellipse fx:id="oval" fill="WHITE" onMouseClicked="#ovalselected" radiusX="26.0" radiusY="13.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Arc fx:id="arc" fill="WHITE" length="270.0" onMouseDragged="#arcselected" radiusX="14.0" radiusY="14.0" startAngle="45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" />
+                  <Button mnemonicParsing="false" onAction="#toolselected" text="brush" />
+                  <ColorPicker fx:id="colorpicker" />
+                  <Button fx:id="eraser" mnemonicParsing="false" onAction="#eraserselected" text="Erase" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <Canvas fx:id="canvas" height="434.0" layoutY="46.0" width="720.0" />
+   </children>
+</AnchorPane>
